@@ -1,5 +1,4 @@
 import { Col, Container, Row } from "react-grid-system";
-import "./App.css";
 import { CampoTexto } from "./componentes/CampoTexto/CampoTexto";
 import { Card } from "./componentes/Card/Card";
 import { Estilos } from "./componentes/EstilosGlobais/Estilos";
@@ -16,6 +15,7 @@ import { IconeWhatsApp } from "./componentes/Icones/IconeWhatsApp";
 import { IconeTwitch } from "./componentes/Icones/IconeTwitch";
 import { IconeInstagram } from "./componentes/Icones/IconeInstagram";
 import { IconeTwitter } from "./componentes/Icones/IconeTwitter";
+import { ListaSuspensa } from "./componentes/ListaSuspensa/ListaSuspensa";
 
 const estadosBrasileiros = [
   { text: "Acre", value: "AC" },
@@ -68,7 +68,7 @@ function App() {
           <Col lg={6} md={8} sm={12}>
             <Card>
               <Tipografia variante="h1" componente="h1">
-                Freelando
+                Crie seu cadastro
               </Tipografia>
               <Tipografia variante="body" componente="body">
                 Crie seu perfil gratuitamente para começar a trabalhar com os
@@ -82,7 +82,7 @@ function App() {
               </Row>
               <Row>
                 <Col lg={4} md={4} sm={4}>
-                  <CampoTexto titulo="Estado" />
+                  <ListaSuspensa titulo="Estado" opcoes={estadosBrasileiros} />
                 </Col>
                 <Col lg={8} md={8} sm={8}>
                   <CampoTexto titulo="Cidade" />
